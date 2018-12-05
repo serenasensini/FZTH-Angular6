@@ -77,6 +77,28 @@ dove si hanno le importazioni in cima (in questo caso, importiamo solo Component
 Comprendere il funzionamento dei componenti è fondamentale: quando si progetta un'applicazione web, è bene avere presente quali elementi devono sempre essere presenti nella pagina web e quali no, come ad esempio una barra di navigazione che dev'essere presente in qualunque pagina del sito, ma così come in molti altri casi. Definire un componente permette di poterlo riutilizzare in qualunque altro componente dello stesso applicativo, e quindi di avere una modularità nel nostro progetto.
  
 ## Cos'è un servizio
+Sono gli elementi che permettono l'implementazione della cosidetta "logica di business" dell'applicazione; in poche parole, sono elementi che offrono funzionalità indipendenti dall'interfaccia web, ma che permettono, tra le altre cose, di fare elaborazioni, chiamare API e inserire dati all'interno delle pagine.
+
+Per creare un servizio, digitare il seguente comando: 
+
+`ng generate service nome_servizio`
+
+Questo comando chiederà a ng di generare un servizio con il nome specificato; verranno quindi creati due file, un file .ts e un .spec.ts, con un funzionamento del tutto simile a quello visto in precedenza. Il contenuto del file .ts sarà molto simile al seguente:
+
+```
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor() { }
+}
+
+```
+
+In questo caso, si hanno le importazioni in alto, il decoratore @Injectable che definisce ??? e la classe DataService, che prende il nome dal servizio che era stato chiamato "data". Al momento il servizio è vuoto, ma è possibile definire al suo interno vari metodi per il recupero di altri dati, magari da API pubbliche o da database. 
 
 ## Routing
 
