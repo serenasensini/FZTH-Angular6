@@ -1,4 +1,4 @@
-Js: Angular6
+# Js: Angular6
 
 ## Getting started
 Per installare Angular6, si può utilizzare npm (gestore dei pacchetti per JavaScript); per verificare che npm sia installato, digitare il seguente comando:
@@ -45,7 +45,7 @@ All'interno della cartella dell'applicazione, ci sono molte cartelle:
 
 Si lavora principalmente all'interno della cartella src, dove ci sono i file principali in HTML, CSS/SCSS e Js; la cartella e2e è una cartella che permette di creare e eseguire dei test chiamati "end-to-end": è una metodologia utilizzata per verificare se il flusso di un'applicazione si sta comportando come progettato dall'inizio alla fine. Lo scopo dell'esecuzione di test end-to-end consiste nell'identificare le dipendenze del sistema e assicurare che vengano trasmesse le informazioni corrette tra i vari componenti e sistemi del sistema. La cartella node_modules invece serve per "raccogliere" tutti i package installati da npm per l'applicativo, in diverse sottocartelle.
 
-Nella cartella /src è possibile notare che ci sono vari file, tra cui un file index.html. Quello è il file visualizzato all'avvio dell'app con il comando eseguito nel precedente paragrafo; nella sottocartella /src/app vengono memorizzati i componenti e i servizi, mentre sotto /src/assets tutte le risorse, come i file grafici. 
+Nella cartella /src è possibile notare che ci sono vari file, tra cui un file index.html. Quello è il file visualizzato all'avvio dell'app con il comando eseguito nel precedente paragrafo; nella sottocartella /src/app vengono memorizzati i componenti e i servizi, mentre sotto /src/assets tutte le risorse, come i file grafici. Nel file /src/styles.scss è possibile aggiungere lo stile globale dell'applicativo.
 
 ## Cos'è un componente
  Un componente è un singolo elemento dell'interfaccia dell'applicazione web, dotato di caratteristiche proprie e che può essere collegato ad altri componenti. Per generare un componente, digitare il comando:
@@ -56,8 +56,27 @@ Nella cartella /src è possibile notare che ci sono vari file, tra cui un file i
 - un file .html, dove chiaramente si ha il modello;
 - un file .scss/css, dove si ha lo stile associato al modello;
 - un file .spec.ts per scopo di test;
-- un file .ts, che costituisce il vero è proprio componente. 
+- un file .ts, che costituisce il vero è proprio componente. Il contenuto di questo file è simile a questo:
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+
+export class AppComponent {
+  title = 'app';
+}
+```
+
+dove si hanno le importazioni in cima (in questo caso, importiamo solo Component), e poi il decoratore @Component che indica le proprietà di quel componente (nel caso d'esempio, app). Per esempio, il selettore del componente si chiamerà "app-root", così come il file a cui fare riferimento per il modello e lo stile, è indicato nelle proprietà "templateUrl" e "styleUrls".
+
+Comprendere il funzionamento dei componenti è fondamentale: quando si progetta un'applicazione web, è bene avere presente quali elementi devono sempre essere presenti nella pagina web e quali no, come ad esempio una barra di navigazione che dev'essere presente in qualunque pagina del sito, ma così come in molti altri casi. Definire un componente permette di poterlo riutilizzare in qualunque altro componente dello stesso applicativo, e quindi di avere una modularità nel nostro progetto.
  
+## 
 
 ## Q&A
 - L'estensione .ts per cosa sta? Si tratta dell'estensione TypeScript, linguaggio che utilizza Angular6. 
