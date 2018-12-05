@@ -76,8 +76,13 @@ dove si hanno le importazioni in cima (in questo caso, importiamo solo Component
 
 Comprendere il funzionamento dei componenti è fondamentale: quando si progetta un'applicazione web, è bene avere presente quali elementi devono sempre essere presenti nella pagina web e quali no, come ad esempio una barra di navigazione che dev'essere presente in qualunque pagina del sito, ma così come in molti altri casi. Definire un componente permette di poterlo riutilizzare in qualunque altro componente dello stesso applicativo, e quindi di avere una modularità nel nostro progetto.
  
-## 
+## Cos'è un servizio
+
+## Routing
 
 ## Q&A
 - L'estensione .ts per cosa sta? Si tratta dell'estensione TypeScript, linguaggio che utilizza Angular6. 
 
+## Link utili
+- [Angular 6 tutorial](https://coursetro.com/posts/code/154/Angular-6-Tutorial---Learn-Angular-6-in-this-Crash-Course)
+- [Angular 7 tutorial](https://coursetro.com/posts/code/171/Angular-7-Tutorial---Learn-Angular-7-by-Example)
