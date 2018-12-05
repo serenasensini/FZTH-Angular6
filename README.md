@@ -1,4 +1,4 @@
-# Js: Angular6
+# Ts: Angular6
 
 ## Getting started
 Per installare Angular6, si può utilizzare npm (gestore dei pacchetti per JavaScript); per verificare che npm sia installato, digitare il seguente comando:
