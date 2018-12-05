@@ -102,9 +102,50 @@ In questo caso, si hanno le importazioni in alto, il decoratore @Injectable che 
 
 ## Routing
 
+Il file /src/app/app-routing.module.ts permette di definire quelli che sono i "link" agli altri componenti dell'applicativo; un esempio del contenuto del file è visibile di seguito.
+
+```
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+E' del tutto simile a quelli già visti; in alto gli import, poi il decoratore @NgModule che serve a configurare l'iniettore e il compilatore e aiuta a organizzare insieme gli elementi tra loro correlati; acquisisce un oggetto che descrive come compilare il modello di un componente e come creare un iniettore in fase di runtime. Infine, si ha la classe AppRoutingModule, che consiste nel caricare e configurare il router in un modulo separato di livello superiore dedicato al routing e importato dall'AppModule root. Per convenzione, il nome della classe del modulo è AppRoutingModule e appartiene al file app-routing.module.ts.
+
+Si supponga per semplicità che esista un componente chiamato 'users'; nel file suddetto, si può definire il comportamento da adottare, qualora si voglia raggiungere quel componente, modificando il file come segue:
+
+```
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { UsersComponent } from './users/users.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: UsersComponent
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+Si aggiunge quindi all'array Routes il path a cui fa riferimento il componente e il nome dello stesso; in alto, tra le importazioni, si definisce il path necessario a recuperare i file inerenti a quel componente.
+
 ## Q&A
 - L'estensione .ts per cosa sta? Si tratta dell'estensione TypeScript, linguaggio che utilizza Angular6. 
 
 ## Link utili
 - [Angular 6 tutorial](https://coursetro.com/posts/code/154/Angular-6-Tutorial---Learn-Angular-6-in-this-Crash-Course)
 - [Angular 7 tutorial](https://coursetro.com/posts/code/171/Angular-7-Tutorial---Learn-Angular-7-by-Example)
+- [Tutorial ufficiale](https://angular.io/tutorial) (fatto super bene!!!)
