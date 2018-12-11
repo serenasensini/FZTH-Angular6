@@ -9,7 +9,7 @@ Se il risultato del comando è un numero di versione, come 3.5.2, allora npm è 
 
 Per procedere quindi all'installazione di Angular6, digitare il seguente comando da terminale:
 
-`npm install -g @angular/cli`
+`npm install -g @angular/cli@6`
 
 Per verificare che l'installazione sia andata a buon fine, digitare il seguente comando:
 
