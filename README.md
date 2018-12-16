@@ -151,3 +151,4 @@ Si aggiunge quindi all'array Routes il path a cui fa riferimento il componente e
 - [Angular 6 tutorial](https://coursetro.com/posts/code/154/Angular-6-Tutorial---Learn-Angular-6-in-this-Crash-Course)
 - [Angular 7 tutorial](https://coursetro.com/posts/code/171/Angular-7-Tutorial---Learn-Angular-7-by-Example)
 - [Tutorial ufficiale](https://angular.io/tutorial) (fatto super bene!!!)
+- [Tutorial base -parla di Angular2, ma molti concetti sono comunque validi](https://codingjam.it/introduzione-ad-angular-2-parte-1/)
