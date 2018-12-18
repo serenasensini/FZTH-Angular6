@@ -1,0 +1,52 @@
+form.component.ts
+```
+export class ArticoloFormReactiveComponent {
+  constructor() {
+    this.myForm = new FormGroup({
+      txtTitolo: new FormControl(),
+      txtAutore: new FormControl(),
+      txtTesto: new FormControl()
+    });
+  }
+}
+```
+form.component.html
+```
+<form [formGroup]="myForm">
+  <div>
+    <label for="txtTitolo">Titolo</label>
+    <input type="text" formControlName="txtTitolo">
+  </div>
+  <div>
+    <label for="txtAutore">Autore</label>
+    <input type="text" formControlName="txtAutore">
+  </div>
+  <div>
+    <label for="txtTesto">Testo</label>
+    <textarea formControlName="txtTesto"></textarea>
+  </div>
+  <button type="button">Invia</button>
+</form>
+```
+app.component.ts
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ArticoloComponent } from './articolo';
+import { AppComponent } from './app.component';
+import { ArticoloFormReactiveComponent } from './articolo-form-reactive/articolo-form-reactive.component';
+import {ReactiveFormsModule} from "@angular/forms";
+@NgModule({
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule
+  ],
+  declarations: [
+    AppComponent,
+    ArticoloComponent,
+    ArticoloFormReactiveComponent
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+```
