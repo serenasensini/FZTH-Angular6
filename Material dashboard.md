@@ -6,7 +6,7 @@ Per aggiungere Angular/material, digitare il seguente comando:
 
 ## Creare una dashboard in stile material
 Per generare il componente utilizzando il Material design, digitare il seguente comando:
-`ng generate @angular/material:material-dashboard --name material-dashboard`
+`ng generate @angular/material:material-dashboard --name dashboard`
 
 Per esempio, utilizzando un approccio tipico a quello della creazione della dashboard, si avrà una bacheca simile a questa:
 
