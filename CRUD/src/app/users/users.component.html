@@ -1,0 +1,38 @@
+<h1>Users</h1>
+
+<input class="form-control" id="myInput" type="text" placeholder="Search.." (keyup)="search()">
+<br>
+
+<form class="form-inline" action="/action_page.php">
+  <label for="name" class="mr-sm-2">Name:</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="name">
+  <label for="website" class="mr-sm-2">Website:</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="website">
+  <button type="button" class="btn btn-success" (click)="create()">Create</button>
+</form>
+
+<div>
+
+  <table class="table table-hover" id="myTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Website</th>
+        <th>Op</th>
+      </tr>
+    </thead>
+    <ng-container>
+      <tbody>
+        <tr *ngFor="let user of users$" id={{user.id}}>
+          <td>{{user.name}}</td>
+          <td>{{user.website}}</td>
+          <td><div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-danger" (click)="delete(user.id)">Delete</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </ng-container>
+  </table>
+</div>
+
