@@ -2,14 +2,15 @@
 
 ## Cos'è
 
-Esistono due diversi approcci ai form in Angular. La prima categoria sono i moduli basati su modelli.
-Usando questo metodo, crei per la prima volta degli input html e poi usi le direttive come ngModel 
-per associare il loro valore alla variabile di un componente. Poi esistono le reactive form: la struttura del modulo 
-è definita nel codice. Le reactive form forniscono un approccio guidato dal modello alla gestione degli input form i cui valori cambiano nel tempo. 
+Esistono due diversi approcci ai form in Angular. La prima categoria sono i _moduli basati su modelli_.
+Usando questo metodo, crei tramite dei tag delle caselle di input in HTML e poi usi le direttive tramite un ngModel 
+per associare il loro valore alla variabile di un componente. 
+
+Esistono poi le __reactive form__: la struttura del modulo è definita nel codice. Le reactive form forniscono un approccio guidato dal modello alla gestione degli input form i cui valori cambiano nel tempo. 
 Questa guida mostra come creare e aggiornare un semplice controllo del modulo, passare all'utilizzo di più controlli 
 in un gruppo, convalidare i valori dei moduli e implementare moduli più avanzati.
 
-Una forma reattiva è solo un modulo HTML che è stato cablato con RxJS per gestire il suo stato come flusso in tempo reale. 
+Una form reattiva è solo un modulo HTML che è stato cablato con RxJS per gestire il suo stato come flusso in tempo reale. 
 Ciò significa che puoi ascoltare le modifiche al suo valore come Osservabile e reagire di conseguenza con errori di 
 validazione, feedback, operazioni di database, ecc.
 
