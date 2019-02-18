@@ -15,7 +15,8 @@ Ciò significa che puoi ascoltare le modifiche al suo valore come Osservabile e 
 validazione, feedback, operazioni di database, ecc.
 
 
-src/app/form/form.component.ts
+_src/app/form/form.component.ts_
+
 ```
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -39,7 +40,8 @@ export class FormComponent {
 }
 ```
 
-src/app/form/form.component.html
+_src/app/form/form.component.html_
+
 ```
 <form [formGroup]="myForm">
   <div>
@@ -72,8 +74,7 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   declarations: [
     AppComponent,
-    FormComponent,
-    ArticoloFormReactiveComponent
+    FormComponent
   ],
   bootstrap: [ AppComponent ]
 })
