@@ -27,3 +27,27 @@ this.mioForm = new FormGroup({
         Validators.required, Validators.email])
     });
 ```
+
+Per lavorare con i controlli, è possibile gestire gli errori tramite la direttiva ngIf, come di seguito:
+
+_/src/app/form/form.component.html_
+```
+  <form [formGroup]="mioForm">
+  <label>Name</label>
+  <input id="name" class="form-control"
+       formControlName="name" required >
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 2 characters long.
+      </div>
+     </div>
+    ...
+```
+Per l'elenco completo di proprietà, vedere la [documentazione](https://angular.io/api/forms/Validators)
+
+Nell'esempio è stato anche inserito un esempio di validatore customizzato, che può ovviamente essere esteso a proprio piacimento.
