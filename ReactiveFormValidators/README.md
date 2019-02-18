@@ -48,6 +48,7 @@ _/src/app/form/form.component.html_
      </div>
     ...
 ```
+
 Per l'elenco completo di proprietà, vedere la [documentazione](https://angular.io/api/forms/Validators)
 
 Nell'esempio è stato anche inserito un esempio di validatore customizzato, che può ovviamente essere esteso a proprio piacimento.
