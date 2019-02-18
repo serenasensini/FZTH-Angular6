@@ -26,59 +26,45 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  myForm: FormGroup;
+mioForm: FormGroup;
   constructor() {
-    this.myForm = new FormGroup({
-      txtTitolo: new FormControl(),
-      txtAutore: new FormControl(),
-      txtSinossi: new FormControl()
+    this.mioForm = new FormGroup({
+      titolo: new FormControl(),
+      autore: new FormControl(),
+      sinossi: new FormControl()
     });
   }
   getInfo() {
-   console.log(this.myForm.value);
-}
+    console.log(this.mioForm.value);
+  }
 }
 ```
 
 _src/app/form/form.component.html_
 
 ```
-<form [formGroup]="myForm">
+<h2>Compila il form</h2>
+<form [formGroup]="mioForm">
   <div>
-    <label for="txtTitolo">Titolo</label>
-    <input type="text" formControlName="txtTitolo">
+    <label for="titolo">Titolo</label>
+    <input type="text" formControlName="titolo">
   </div>
   <div>
-    <label for="txtAutore">Autore</label>
-    <input type="text" formControlName="txtAutore">
+    <label for="autore">Autore</label>
+    <input type="text" formControlName="autore">
   </div>
   <div>
-    <label for="txtSinossi">Testo</label>
-    <textarea formControlName="txtSinossi"></textarea>
+    <label for="sinossi">Testo</label>
+    <textarea formControlName="sinossi"></textarea>
   </div>
   <button type="button" (click)="getInfo()">Invia</button>
 </form>
-```
-src/app/app.module.ts
-```
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { ArticoloComponent } from './articolo';
-import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import {ReactiveFormsModule} from "@angular/forms";
-@NgModule({
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule
-  ],
-  declarations: [
-    AppComponent,
-    FormComponent
-  ],
-  bootstrap: [ AppComponent ]
-})
-export class AppModule { }
+
+<h2>Risultato in tempo reale:</h2>
+<p>Titolo inserito:{{this.mioForm.value.titolo}}</p>
+<p>Autore inserito:{{this.mioForm.value.autore}}</p>
+<p>Sinossi inserito:{{this.mioForm.value.sinossi}}</p>
+
 ```
 
 ## Link utili
