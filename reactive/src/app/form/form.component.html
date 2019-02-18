@@ -1,0 +1,21 @@
+<h2>Compila il form</h2>
+<form [formGroup]="mioForm">
+  <div>
+    <label for="titolo">Titolo</label>
+    <input type="text" formControlName="titolo">
+  </div>
+  <div>
+    <label for="autore">Autore</label>
+    <input type="text" formControlName="autore">
+  </div>
+  <div>
+    <label for="sinossi">Testo</label>
+    <textarea formControlName="sinossi"></textarea>
+  </div>
+  <button type="button" (click)="getInfo()">Invia</button>
+</form>
+
+<h2>Risultato in tempo reale:</h2>
+<p>Titolo inserito:{{this.mioForm.value.titolo}}</p>
+<p>Autore inserito:{{this.mioForm.value.autore}}</p>
+<p>Sinossi inserito:{{this.mioForm.value.sinossi}}</p>
