@@ -14,7 +14,7 @@
 
 `
 "styles": [
-  "styles/bootstrap-3.3.7-dist/css/bootstrap.min.css",
+  "node_modules/dist/bootstrap/css/bootstrap.css",
   "styles.css"
 ],
 `
