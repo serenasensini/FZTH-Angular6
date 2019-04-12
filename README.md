@@ -1,15 +1,15 @@
-# Ts: Angular6
+# Ts: Angular 7
 
 ## Getting started
-Per installare Angular6, si può utilizzare npm (gestore dei pacchetti per JavaScript); per verificare che npm sia installato, digitare il seguente comando:
+Per installare Angular 7, si può utilizzare npm (gestore dei pacchetti per JavaScript); per verificare che npm sia installato, digitare il seguente comando:
 
 `npm -v`
 
 Se il risultato del comando è un numero di versione, come 3.5.2, allora npm è correttamente installato e si può procedere oltre; altrimenti, npm va installato. Per installarlo su Windows, seguire [questa](https://blog.teamtreehouse.com/install-node-js-npm-windows) guida; per installarlo su Ubuntu, seguire [questa](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) guida. Per altre distribuzioni Unix-based, il procedimento è similare, ma ovviamente cambia il gestore dei pacchetti.
 
-Per procedere quindi all'installazione di Angular6, digitare il seguente comando da terminale:
+Per procedere quindi all'installazione di Angular 7, digitare il seguente comando da terminale:
 
-`npm install -g @angular/cli@6`
+`npm install -g @angular/cli@7`
 
 Per verificare che l'installazione sia andata a buon fine, digitare il seguente comando:
 
